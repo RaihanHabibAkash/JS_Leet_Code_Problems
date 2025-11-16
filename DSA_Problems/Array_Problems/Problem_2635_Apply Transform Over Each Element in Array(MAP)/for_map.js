@@ -1,3 +1,18 @@
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    let array = [];
+    for(let i = 0; i < arr.length; i++){
+        array[i] = fn(arr[i], i);
+    }
+    return array;
+
+};
+
+
 // Given an integer array arr and a mapping function fn, return a new array with a transformation applied to each element.
 
 // The returned array should be created such that returnedArray[i] = fn(arr[i], i).
@@ -20,15 +35,3 @@
 // Input: arr = [10,20,30], fn = function constant() { return 42; }
 // Output: [42,42,42]
 // Explanation: The function always returns 42.
-
-const map = (arr, fn) => {
-    let newArray = [];
-
-    for(let i = 0; i < arr.length; i++){
-        newArray[i] = fn(arr[i], i)
-    }
-    return newArray;
-}
-
-const result = map([1,2,3], (n, x) => n + x);
-console.log(result);
