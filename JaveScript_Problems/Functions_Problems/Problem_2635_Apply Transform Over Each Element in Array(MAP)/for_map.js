@@ -8,8 +8,8 @@ var map = function(arr, fn) {
     for(let i = 0; i < arr.length; i++){
         array[i] = fn(arr[i], i);
     }
-    return array;
 
+    return array;
 };
 
 
